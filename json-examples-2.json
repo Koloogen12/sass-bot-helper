@@ -1,0 +1,197 @@
+// data/saas_knowledge.json
+{
+  "documents": [
+    {
+      "title": "Product-Market Fit для SaaS",
+      "category": "validation",
+      "content": "Product-Market Fit (PMF) - это состояние, когда ваш продукт удовлетворяет сильную рыночную потребность. Для SaaS ключевые индикаторы PMF: 1) Retention rate > 85% после 6 месяцев, 2) NPS > 50, 3) Органический рост через word-of-mouth > 20% новых клиентов, 4) Churn < 5% в месяц для B2B. Методы достижения: глубокие customer development интервью (минимум 50), фокус на одной узкой нише, итеративная разработка с еженедельными релизами.",
+      "tags": ["pmf", "validation", "metrics"],
+      "metadata": {
+        "source": "SaaS best practices",
+        "updated": "2024-01"
+      }
+    },
+    {
+      "title": "Ценообразование SaaS",
+      "category": "monetization",
+      "content": "Стратегии ценообразования: 1) Value-based pricing - цена основана на ROI для клиента (идеально для B2B), 2) Tiered pricing - 3-4 тарифа с разным функционалом, 3) Usage-based - оплата за использование (API calls, storage). Рекомендации: всегда иметь бесплатный trial 14-30 дней, показывать annual billing со скидкой 15-20%, использовать price anchoring с premium планом. Метрики: LTV:CAC > 3, Gross margin > 70%.",
+      "tags": ["pricing", "monetization", "revenue"],
+      "metadata": {
+        "examples": ["Slack", "Zoom", "Stripe"]
+      }
+    },
+    {
+      "title": "Снижение Churn Rate",
+      "category": "retention",
+      "content": "Тактики снижения оттока: 1) Proactive customer success - связываться с клиентами при падении использования, 2) In-app onboarding - довести до AHA момента в первые 24 часа, 3) Exit surveys и win-back campaigns, 4) Расширение функционала под топ запросы. Бенчмарки: B2B SaaS churn < 5% monthly, B2C < 7%.",
+      "tags": ["retention", "churn", "customer success"],
+      "metadata": {
+        "impact": "high",
+        "difficulty": "medium"
+      }
+    }
+  ]
+}
+
+// data/growth_strategies.json
+[
+  {
+    "title": "Product-Led Growth (PLG)",
+    "category": "growth",
+    "content": "PLG - стратегия, где продукт сам является главным драйвером привлечения, конверсии и расширения. Ключевые элементы: 1) Freemium или free trial без требования карты, 2) Self-serve onboarding за < 5 минут, 3) Вирусные механики (Dropbox referral, Zoom ссылки), 4) In-product upsell. Метрики PLG: Time-to-value < 24h, Activation rate > 50%, Viral coefficient > 0.6. Примеры: Slack, Figma, Notion.",
+    "tags": ["plg", "growth", "acquisition"],
+    "sections": [
+      {
+        "title": "Вирусные механики",
+        "text": "Collaborative features, Easy sharing, Network effects, Referral programs с двусторонней выгодой"
+      },
+      {
+        "title": "Метрики PLG",
+        "text": "Product Qualified Leads (PQL), Time to Value, Feature adoption rate, Expansion revenue"
+      }
+    ]
+  },
+  {
+    "title": "Cold Outreach для B2B SaaS",
+    "category": "sales",
+    "content": "Эффективный cold outreach: 1) Гипер-персонализация первой строки, 2) Четкая value proposition в 1 предложение, 3) Social proof (клиенты, метрики), 4) Soft CTA (не demo, а разговор о проблеме). Каналы: LinkedIn (acceptance rate 20-30%), Cold email (open rate > 40%, reply rate > 10%). Инструменты: Apollo.io, Lemlist, LinkedIn Sales Navigator.",
+    "tags": ["sales", "outreach", "b2b"],
+    "metadata": {
+      "conversion_benchmarks": {
+        "cold_email_open_rate": "40-60%",
+        "cold_email_reply_rate": "10-20%",
+        "linkedin_acceptance_rate": "20-30%",
+        "meeting_booked_rate": "3-5%"
+      }
+    }
+  },
+  {
+    "title": "Content Marketing для SaaS",
+    "category": "marketing",
+    "content": "Стратегия контент-маркетинга: 1) SEO-driven content на high-intent keywords, 2) Сравнения с конкурентами, 3) Интеграции и use cases, 4) Data-driven исследования для PR. Форматы: Long-form guides (3000+ слов), Product updates, Customer case studies, Free tools/calculators. Distribution: Organic search (60%), Email newsletter (20%), Social amplification (20%).",
+    "tags": ["marketing", "content", "seo"],
+    "metadata": {
+      "content_types": ["guides", "comparisons", "case studies", "tools"],
+      "metrics": ["organic traffic", "keyword rankings", "backlinks", "conversions"]
+    }
+  }
+]
+
+// data/frameworks.json
+{
+  "frameworks": [
+    {
+      "title": "RICE Prioritization",
+      "category": "prioritization",
+      "description": "RICE = (Reach × Impact × Confidence) / Effort",
+      "content": "RICE помогает приоритизировать фичи объективно. Reach - количество пользователей за период. Impact - влияние на метрику (0.25 = минимальное, 3 = массивное). Confidence - уверенность в оценках (0-100%). Effort - человеко-месяцы. Пример: Новый onboarding. Reach = 1000 users/month, Impact = 2, Confidence = 80%, Effort = 2 person-months. RICE = (1000 × 2 × 0.8) / 2 = 800.",
+      "tags": ["prioritization", "product management", "frameworks"],
+      "metadata": {
+        "when_to_use": "Выбор между множеством фич",
+        "pros": "Объективность, учет неопределенности",
+        "cons": "Сложность точной оценки"
+      }
+    },
+    {
+      "title": "Jobs-to-be-Done (JTBD)",
+      "category": "product",
+      "content": "JTBD фокусируется на задачах, которые пользователи 'нанимают' продукт выполнить. Структура: When [situation], I want to [motivation], so I can [outcome]. Пример: 'Когда я управляю remote командой, я хочу видеть прогресс по задачам в реальном времени, чтобы не микроменеджить и сохранять доверие'. Применение: Customer interviews с фокусом на ситуации, не решения. Switching moments - когда меняют решение.",
+      "tags": ["jtbd", "product", "customer research"],
+      "metadata": {
+        "created_by": "Clayton Christensen",
+        "key_questions": [
+          "В какой ситуации возникает потребность?",
+          "Что мотивирует искать решение?",
+          "Какой результат считается успешным?",
+          "Что заставляет отказаться от текущего решения?"
+        ]
+      }
+    },
+    {
+      "title": "AARRR Metrics (Pirate Metrics)",
+      "category": "metrics",
+      "content": "AARRR - фреймворк для измерения воронки SaaS. Acquisition - как узнают о продукте (CAC, channels). Activation - первый успешный опыт (time to value, onboarding completion). Retention - возвращаются ли (DAU/MAU, cohort retention). Revenue - платят ли (ARPU, LTV). Referral - рекомендуют ли (NPS, viral coefficient). Каждый этап имеет свои метрики и оптимизации.",
+      "tags": ["metrics", "aarrr", "analytics"],
+      "sections": [
+        {
+          "stage": "Acquisition",
+          "metrics": ["CAC", "Channel efficiency", "Conversion rate"],
+          "benchmarks": "CAC < 1/3 LTV"
+        },
+        {
+          "stage": "Activation", 
+          "metrics": ["Time to value", "Onboarding completion", "Feature adoption"],
+          "benchmarks": "Activation rate > 50%"
+        },
+        {
+          "stage": "Retention",
+          "metrics": ["Logo retention", "Net revenue retention", "Cohort retention"],
+          "benchmarks": "Month 6 retention > 80% for B2B"
+        }
+      ]
+    }
+  ]
+}
+
+// data/metrics.json
+[
+  {
+    "title": "MRR (Monthly Recurring Revenue)",
+    "category": "revenue",
+    "content": "MRR - ключевая метрика для SaaS. Расчет: Сумма всех recurring подписок за месяц. Компоненты: New MRR (новые клиенты) + Expansion MRR (upsell/cross-sell) + Reactivation MRR - Contraction MRR (downgrade) - Churn MRR. Growth rate benchmark: 10-20% MoM для early stage, 5-7% для mature. Net Revenue Retention > 100% - признак здорового SaaS.",
+    "tags": ["revenue", "mrr", "growth"],
+    "metadata": {
+      "formulas": {
+        "mrr_growth_rate": "((MRR_end - MRR_start) / MRR_start) × 100",
+        "net_revenue_retention": "((MRR_start + Expansion - Contraction - Churn) / MRR_start) × 100"
+      },
+      "benchmarks": {
+        "early_stage_growth": "10-20% MoM",
+        "scale_up_growth": "5-7% MoM",
+        "net_revenue_retention": "> 110% excellent, > 100% good"
+      }
+    }
+  },
+  {
+    "title": "LTV:CAC Ratio",
+    "category": "unit economics",
+    "content": "LTV:CAC - отношение пожизненной ценности клиента к стоимости привлечения. LTV = ARPU × Gross Margin × 1/Churn Rate. CAC = (Sales + Marketing costs) / New Customers. Здоровый SaaS имеет LTV:CAC > 3:1. Payback period < 12 месяцев. Улучшение: снижение CAC через PLG, увеличение LTV через upsell и снижение churn.",
+    "tags": ["unit economics", "ltv", "cac"],
+    "metadata": {
+      "calculation_example": {
+        "arpu": 100,
+        "gross_margin": 0.8,
+        "monthly_churn": 0.05,
+        "ltv": 1600,
+        "cac": 400,
+        "ratio": 4
+      },
+      "optimization_tactics": [
+        "Improve onboarding to reduce churn",
+        "Implement expansion revenue",
+        "Optimize paid channels",
+        "Build referral program"
+      ]
+    }
+  },
+  {
+    "title": "Activation Rate",
+    "category": "product",
+    "content": "Activation Rate - процент пользователей, которые достигли AHA момента. Определение AHA: действие, после которого retention значительно выше. Примеры: Slack - отправка 2000 сообщений командой, Dropbox - сохранение файла на 2+ устройствах. Измерение: когортный анализ, correlation с retention. Улучшение: упрощение onboarding, product tours, triggered emails.",
+    "tags": ["activation", "onboarding", "product"],
+    "metadata": {
+      "examples": {
+        "slack": "Team sends 2000 messages",
+        "dropbox": "File saved on 2+ devices",
+        "zoom": "Complete first meeting",
+        "hubspot": "Import contacts and send first email"
+      },
+      "improvement_tactics": [
+        "Reduce time to value",
+        "Remove friction in onboarding",
+        "Personalized onboarding paths",
+        "In-app guidance and tooltips"
+      ]
+    }
+  }
+]
