@@ -691,4 +691,8 @@ class SaaSExpertBot:
         
         response = await self.openai_client.chat.completions.create(
             model="gpt-4o",
-            messages=[{"role": "system", "content": "Ты эксперт по JTBD"}, {"role": "user", "content": prompt}
+            messages = [
+    {"role": "system", "content": "Ты эксперт по JTBD"},
+    {"role": "user", "content": prompt},
+]
+
