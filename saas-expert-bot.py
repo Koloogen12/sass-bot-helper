@@ -690,9 +690,11 @@ class SaaSExpertBot:
         Отвечай на русском, используй конкретные примеры."""
         
         response = await self.openai_client.chat.completions.create(
-            model="gpt-4o",
-            messages = [
-    {"role": "system", "content": "Ты эксперт по JTBD"},
-    {"role": "user", "content": prompt},
-]
+    model="gpt-4o",
+    messages=[
+        {"role": "system", "content": "Ты эксперт по JTBD"},
+        {"role": "user", "content": prompt},
+    ]
+)
+
 
