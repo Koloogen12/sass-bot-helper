@@ -1,20 +1,20 @@
 databases:
   - name: bot-db
     databaseName: saas_bot
-    plan: free               # enough for MVP
-    # ipAllowList оставляем пустым — внутренние сервисы и так имеют доступ
-    # pgvector подключим SQL-командой после создания базы
+    plan: free
+    ipAllowList: []          # обязательное поле
 
 services:
   - type: redis
     name: bot-cache
     plan: free
+    ipAllowList: []          # тоже обязательно
 
   - type: web
     name: saas-expert-bot
     runtime: python
-    region: frankfurt        # или ближайший
+    region: frankfurt
     buildCommand: pip install -r requirements.txt
     startCommand: python saas-expert-bot.py
     envVars:
-      - fromGroup: bot-env   # 👈 обязательный дефис! массив EnvVars
+      - fromGroup: bot-env   # дефис сохраняем!
